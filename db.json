@@ -1,28 +1,12 @@
 {
   "products": [
     {
-      "id": 1,
-      "name": "SmartPhonef",
-      "price": "1200000",
-      "quantity": 20,
-      "selected": true,
-      "available": true
-    },
-    {
-      "id": 2,
-      "name": "Computer",
-      "price": 1200,
-      "quantity": 20,
-      "available": true,
-      "selected": false
-    },
-    {
       "id": 3,
       "name": "Printer",
       "price": 1200,
-      "quantity": 20,
-      "available": true,
-      "selected": true
+      "quantity": "2000",
+      "selected": false,
+      "available": true
     },
     {
       "id": 4,
@@ -31,14 +15,6 @@
       "quantity": 20,
       "available": true,
       "selected": false
-    },
-    {
-      "name": "Camera2",
-      "price": "2000",
-      "quantity": "300",
-      "selected": true,
-      "available": false,
-      "id": 5
     },
     {
       "name": "dasdasdasd",
@@ -68,7 +44,7 @@
       "name": "dasdasdasd",
       "price": 0,
       "quantity": 0,
-      "selected": true,
+      "selected": false,
       "available": true,
       "id": 9
     },
@@ -84,7 +60,7 @@
       "name": "dasdasdasd",
       "price": "05655",
       "quantity": "0155454",
-      "selected": true,
+      "selected": false,
       "available": true,
       "id": 11
     },
@@ -191,6 +167,30 @@
       "selected": false,
       "available": true,
       "id": 12
+    },
+    {
+      "name": "jhj",
+      "price": 0,
+      "quantity": 0,
+      "selected": true,
+      "available": true,
+      "id": 13
+    },
+    {
+      "name": "g;sda;sljfxg",
+      "price": 0,
+      "quantity": 0,
+      "selected": true,
+      "available": true,
+      "id": 14
+    },
+    {
+      "name": "sdfsdf",
+      "price": 0,
+      "quantity": 0,
+      "selected": true,
+      "available": true,
+      "id": 15
     }
   ]
 }
