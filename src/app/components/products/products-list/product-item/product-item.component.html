@@ -4,7 +4,7 @@
       <td>{{product.price}}</td>
       <td>{{product.quantity}}</td>
       <td>{{product.selected}}</td>
-      <td>{{product.available}}</td>
+      <td>{{product.available}} </td>
       <td>
         <button type="button" (click)="onSelect(product)" [ngClass]="product.selected?'btn-success':'btn-danger'">
           <span *ngIf="product.selected">Unselect</span>

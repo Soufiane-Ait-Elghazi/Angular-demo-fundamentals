@@ -2,6 +2,7 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Observable} from "rxjs";
 import {ActionEvent, AppDataState, DataStateEnum, ProductActionsTypes} from "../../../state/product.state";
 import {Product} from "../../../model/products.model";
+import {EventDriverService} from "../../../services/event.driver.service";
 
 @Component({
   selector: 'app-products-list',
@@ -10,30 +11,16 @@ import {Product} from "../../../model/products.model";
 })
 export class ProductsListComponent implements OnInit {
   @Input() productsInput$:Observable<AppDataState<Product[]>> |null=null;
-  @Output() productEventEmitter : EventEmitter<ActionEvent> = new EventEmitter<any>()
+ // @Output() productEventEmitter : EventEmitter<ActionEvent> = new EventEmitter<any>()
   readonly DataStateEnum = DataStateEnum;
-  constructor() { }
+  constructor(private eventDriverService : EventDriverService) { }
 
   ngOnInit(): void {
   }
 
-  onSelect(p: Product) {
-     this.productEventEmitter.emit({type:ProductActionsTypes.SELECT_PRODUCT,payload:p})
-  }
-
-  onEditProduct(p: Product) {
-    this.productEventEmitter.emit({type:ProductActionsTypes.EDIT_PRODUCT,payload:p})
-  }
-
-  onDeleteProduct(p: Product) {
-    this.productEventEmitter.emit({type:ProductActionsTypes.DELETE_PRODUCT,payload:p})
-  }
 
   onNewProduct() {
-    this.productEventEmitter.emit({type:ProductActionsTypes.NEW_PRODUCT})
-  }
+    this.eventDriverService.publishEvent({type :ProductActionsTypes.NEW_PRODUCT,payload:null})
 
-  onActionEvent($event: ActionEvent) {
-    this.productEventEmitter.emit($event)
   }
 }
